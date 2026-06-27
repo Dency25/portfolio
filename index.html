@@ -12,7 +12,25 @@
 </head>
 <body>
 
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <div class="preloader-inner">
+    <p class="preloader-cmd">$ npm run portfolio</p>
+    <div class="preloader-bar"><span id="preloaderFill"></span></div>
+    <p class="preloader-pct"><span id="preloaderPct">0</span>%</p>
+  </div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
 <div class="grid-overlay" aria-hidden="true"></div>
+<div class="grain-overlay" aria-hidden="true"></div>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -20,19 +38,19 @@
   <div class="nav-inner">
     <a href="#top" class="logo">dency<span class="dim">.dev</span></a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#stack">Stack</a>
-      <a href="#experience">Experience</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" class="magnetic">About</a>
+      <a href="#stack" class="magnetic">Stack</a>
+      <a href="#work" class="magnetic">Work</a>
+      <a href="#contact" class="magnetic">Contact</a>
     </nav>
-    <a href="resume-backend.pdf" class="btn btn-ghost nav-cta" download>Résumé ↓</a>
+    <a href="resume-backend.pdf" class="btn btn-ghost nav-cta magnetic" download>Résumé ↓</a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+    <a href="#about">About</a>
     <a href="#stack">Stack</a>
-    <a href="#experience">Experience</a>
     <a href="#work">Work</a>
     <a href="#contact">Contact</a>
     <a href="resume-backend.pdf" download>Download Résumé</a>
@@ -45,27 +63,28 @@
   <section class="hero" id="top">
     <div class="hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">// full stack developer</p>
-        <h1>Dency Desai</h1>
-        <p class="hero-sub">I build the API, then I build the screen that calls it.</p>
-        <p class="hero-lede">
+        <p class="eyebrow reveal-hero" style="transition-delay:.05s">
+          <span class="status-dot"></span> Available for full-time &amp; contract work
+        </p>
+        <h1 class="hero-name">
+          <span class="reveal-hero hero-line" style="transition-delay:.12s">Dency</span>
+          <span class="reveal-hero hero-line" style="transition-delay:.2s">Desai</span>
+        </h1>
+        <p class="hero-sub reveal-hero" style="transition-delay:.3s">I build the API, then I build the screen that calls it.</p>
+        <p class="hero-lede reveal-hero" style="transition-delay:.38s">
           Backend systems in Node.js, Express and TypeScript &mdash; authentication, RBAC,
           real-time services &mdash; paired with Angular interfaces on top. 2+ years shipping
           ERP, marketplace, and booking platforms for clients across the US and Europe at
           Nexotips Infotech.
         </p>
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">View work</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        <div class="hero-actions reveal-hero" style="transition-delay:.46s">
+          <a href="#work" class="btn btn-primary magnetic">View work</a>
+          <a href="#contact" class="btn btn-ghost magnetic">Get in touch</a>
         </div>
-        <div class="hero-meta">
-          <span>Surat, Gujarat, India</span>
-          <span class="dot">•</span>
-          <span>Available for full-time &amp; contract roles</span>
-        </div>
+        <p class="hero-meta reveal-hero" style="transition-delay:.54s">Surat, Gujarat, India</p>
       </div>
 
-      <div class="hero-terminal" aria-hidden="false">
+      <div class="hero-terminal reveal-hero" style="transition-delay:.3s">
         <div class="terminal-bar">
           <span class="terminal-dot"></span>
           <span class="terminal-dot"></span>
@@ -84,13 +103,88 @@
     </div>
   </section>
 
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Node.js</span><span>Express</span><span>TypeScript</span><span>Angular</span>
+      <span>REST APIs</span><span>WebSockets</span><span>MySQL</span><span>MongoDB</span>
+      <span>PostgreSQL</span><span>Firebase</span><span>JWT / RBAC</span><span>Swagger</span>
+      <span>Node.js</span><span>Express</span><span>TypeScript</span><span>Angular</span>
+      <span>REST APIs</span><span>WebSockets</span><span>MySQL</span><span>MongoDB</span>
+      <span>PostgreSQL</span><span>Firebase</span><span>JWT / RBAC</span><span>Swagger</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <p class="section-label reveal"><span class="pin"></span>/about</p>
+    <h2 class="section-title reveal">My story so far</h2>
+
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo">
+          <img src="profile.jpg" alt="Dency Desai" id="aboutPhoto">
+          <p class="about-photo-fallback-text">// drop profile.jpg in this folder</p>
+        </div>
+        <div class="about-quickfacts">
+          <div><span>Based in</span><strong>Surat, India</strong></div>
+          <div><span>Role</span><strong>Full Stack Developer</strong></div>
+          <div><span>Since</span><strong>Jan 2024</strong></div>
+        </div>
+      </div>
+
+      <div class="about-copy reveal">
+        <p>
+          I graduated from Gujarat Technological University in 2024 with a distinction in
+          Information Technology, and joined Nexotips Infotech the same year &mdash; first as
+          an intern, then full-time. What started as writing my first REST endpoints turned
+          into leading a team of three, shipping production systems for clients across the
+          US and Europe.
+        </p>
+        <p>
+          I like the backend best: the part where you decide how data is shaped, who's
+          allowed to touch it, and how the system behaves when ten things happen at once.
+          Angular is where I make sure all of that actually reaches the person using it.
+        </p>
+        <p>
+          Outside of new features, I spend a good chunk of time going back over APIs I've
+          already shipped &mdash; better error handling, cleaner schemas, fewer surprises
+          in production.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section section-tight" id="stats">
+    <p class="section-label reveal"><span class="pin"></span>/achievements</p>
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <p class="stat-number" data-target="2" data-suffix="+">0</p>
+        <p class="stat-label">Years in production development</p>
+      </div>
+      <div class="stat-item reveal">
+        <p class="stat-number" data-target="6" data-suffix="+">0</p>
+        <p class="stat-label">Platforms shipped to production</p>
+      </div>
+      <div class="stat-item reveal">
+        <p class="stat-number" data-target="3" data-suffix="">0</p>
+        <p class="stat-label">Developers led on live projects</p>
+      </div>
+      <div class="stat-item reveal">
+        <p class="stat-number" data-target="25" data-suffix="%">0</p>
+        <p class="stat-label">Productivity lift via workflow automation</p>
+      </div>
+    </div>
+  </section>
+
   <!-- STACK -->
   <section class="section" id="stack">
-    <p class="section-label">/stack</p>
-    <h2 class="section-title">What I build with</h2>
+    <p class="section-label reveal"><span class="pin"></span>/stack</p>
+    <h2 class="section-title reveal">What I build with</h2>
 
     <div class="stack-grid">
-      <div class="stack-card">
+      <div class="stack-card reveal">
         <p class="stack-card-label">backend</p>
         <div class="tag-row">
           <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">TypeScript</span>
@@ -98,7 +192,7 @@
           <span class="tag">RBAC</span><span class="tag">Swagger</span><span class="tag">Postman</span>
         </div>
       </div>
-      <div class="stack-card">
+      <div class="stack-card reveal">
         <p class="stack-card-label">frontend</p>
         <div class="tag-row">
           <span class="tag">Angular 18</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span>
@@ -106,14 +200,14 @@
           <span class="tag">Bootstrap</span><span class="tag">SCSS</span>
         </div>
       </div>
-      <div class="stack-card">
+      <div class="stack-card reveal">
         <p class="stack-card-label">database</p>
         <div class="tag-row">
           <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span>
           <span class="tag">Firebase</span>
         </div>
       </div>
-      <div class="stack-card">
+      <div class="stack-card reveal">
         <p class="stack-card-label">tools &amp; practice</p>
         <div class="tag-row">
           <span class="tag">Git / GitHub</span><span class="tag">Agile</span><span class="tag">MVC Architecture</span>
@@ -125,10 +219,10 @@
 
   <!-- EXPERIENCE -->
   <section class="section" id="experience">
-    <p class="section-label">/experience</p>
-    <h2 class="section-title">Where I've worked</h2>
+    <p class="section-label reveal"><span class="pin"></span>/experience</p>
+    <h2 class="section-title reveal">Where I've worked</h2>
 
-    <div class="exp-card">
+    <div class="exp-card reveal">
       <div class="exp-head">
         <div>
           <h3>Full Stack Developer</h3>
@@ -148,12 +242,13 @@
 
   <!-- WORK -->
   <section class="section" id="work">
-    <p class="section-label">/work</p>
-    <h2 class="section-title">Projects shipped to production</h2>
+    <p class="section-label reveal"><span class="pin"></span>/work</p>
+    <h2 class="section-title reveal">Projects shipped to production</h2>
 
     <div class="work-grid">
 
-      <article class="work-card">
+      <article class="work-card reveal tilt">
+        <div class="work-card-sweep"></div>
         <div class="work-head">
           <span class="method post">POST</span>
           <span class="endpoint">/projects/nexdev</span>
@@ -172,7 +267,8 @@
         </div>
       </article>
 
-      <article class="work-card">
+      <article class="work-card reveal tilt">
+        <div class="work-card-sweep"></div>
         <div class="work-head">
           <span class="method put">PUT</span>
           <span class="endpoint">/projects/textile-erp</span>
@@ -191,7 +287,8 @@
         </div>
       </article>
 
-      <article class="work-card">
+      <article class="work-card reveal tilt">
+        <div class="work-card-sweep"></div>
         <div class="work-head">
           <span class="method get">GET</span>
           <span class="endpoint">/projects/findahunt</span>
@@ -210,7 +307,8 @@
         </div>
       </article>
 
-      <article class="work-card">
+      <article class="work-card reveal tilt">
+        <div class="work-card-sweep"></div>
         <div class="work-head">
           <span class="method patch">PATCH</span>
           <span class="endpoint">/projects/wallzy</span>
@@ -234,8 +332,8 @@
 
   <!-- EDUCATION -->
   <section class="section section-tight" id="education">
-    <p class="section-label">/education</p>
-    <div class="edu-row">
+    <p class="section-label reveal"><span class="pin"></span>/education</p>
+    <div class="edu-row reveal">
       <div>
         <h3 class="edu-degree">Bachelor of Information Technology</h3>
         <p class="edu-org">Gujarat Technological University</p>
@@ -249,38 +347,44 @@
 
   <!-- CONTACT -->
   <section class="section contact" id="contact">
-    <p class="section-label">/contact</p>
-    <h2 class="section-title">Let's build something</h2>
-    <p class="contact-lede">Open to full-time and contract backend / full-stack roles.</p>
+    <p class="section-label reveal"><span class="pin"></span>/contact</p>
+    <h2 class="section-title reveal">Let's build something</h2>
+    <p class="contact-lede reveal">Open to full-time and contract backend / full-stack roles.</p>
 
     <div class="contact-grid">
-      <a class="contact-card" href="mailto:desaidency8@gmail.com">
+      <a class="contact-card reveal magnetic" href="mailto:desaidency8@gmail.com">
         <span class="contact-label">Email</span>
         <span class="contact-value">desaidency8@gmail.com</span>
       </a>
-      <a class="contact-card" href="tel:+919510155609">
+      <a class="contact-card reveal magnetic" href="tel:+919510155609">
         <span class="contact-label">Phone</span>
         <span class="contact-value">+91 95101 55609</span>
       </a>
-      <a class="contact-card" href="https://www.linkedin.com/in/dency-desai/" target="_blank" rel="noopener">
+      <a class="contact-card reveal magnetic" href="https://www.linkedin.com/in/dency-desai/" target="_blank" rel="noopener">
         <span class="contact-label">LinkedIn</span>
         <span class="contact-value">/in/dency-desai</span>
       </a>
-      <a class="contact-card" href="https://github.com/dency-nexotips" target="_blank" rel="noopener">
+      <a class="contact-card reveal magnetic" href="https://github.com/dency-nexotips" target="_blank" rel="noopener">
         <span class="contact-label">GitHub</span>
         <span class="contact-value">@dency-nexotips</span>
       </a>
     </div>
 
-    <div class="resume-row">
-      <a href="resume-backend.pdf" class="btn btn-primary" download>Backend résumé ↓</a>
-      <a href="resume-frontend.pdf" class="btn btn-ghost" download>Frontend résumé ↓</a>
+    <div class="resume-row reveal">
+      <a href="resume-backend.pdf" class="btn btn-primary magnetic" download>Backend résumé ↓</a>
+      <a href="resume-frontend.pdf" class="btn btn-ghost magnetic" download>Frontend résumé ↓</a>
     </div>
   </section>
 
 </main>
 
 <footer class="footer">
+  <div class="footer-marquee" aria-hidden="true">
+    <div class="footer-marquee-track">
+      <span>Let's build something —</span><span>Let's build something —</span>
+      <span>Let's build something —</span><span>Let's build something —</span>
+    </div>
+  </div>
   <p>Dency Desai &middot; Surat, Gujarat, India</p>
   <p class="footer-dim">Built with HTML, CSS &amp; JS &mdash; no framework needed for this one.</p>
 </footer>
