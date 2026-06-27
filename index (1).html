@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dency Desai — Full Stack Developer</title>
+<meta name="description" content="Dency Desai, Full Stack Developer building REST APIs, ERP systems, and Angular interfaces.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">dency<span class="dim">.dev</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#stack">Stack</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="resume-backend.pdf" class="btn btn-ghost nav-cta" download>Résumé ↓</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile">
+    <a href="#stack">Stack</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+    <a href="resume-backend.pdf" download>Download Résumé</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">// full stack developer</p>
+        <h1>Dency Desai</h1>
+        <p class="hero-sub">I build the API, then I build the screen that calls it.</p>
+        <p class="hero-lede">
+          Backend systems in Node.js, Express and TypeScript &mdash; authentication, RBAC,
+          real-time services &mdash; paired with Angular interfaces on top. 2+ years shipping
+          ERP, marketplace, and booking platforms for clients across the US and Europe at
+          Nexotips Infotech.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-meta">
+          <span>Surat, Gujarat, India</span>
+          <span class="dot">•</span>
+          <span>Available for full-time &amp; contract roles</span>
+        </div>
+      </div>
+
+      <div class="hero-terminal" aria-hidden="false">
+        <div class="terminal-bar">
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+          <span class="terminal-title">request.http</span>
+        </div>
+        <div class="terminal-body">
+          <p class="req-line"><span class="method get">GET</span> <span class="path">/dency-desai</span></p>
+          <pre class="json-block" id="jsonBlock"></pre>
+          <div class="status-row" id="statusRow">
+            <span class="status-pill">200 OK</span>
+            <span class="status-time">14ms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack">
+    <p class="section-label">/stack</p>
+    <h2 class="section-title">What I build with</h2>
+
+    <div class="stack-grid">
+      <div class="stack-card">
+        <p class="stack-card-label">backend</p>
+        <div class="tag-row">
+          <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">TypeScript</span>
+          <span class="tag">REST APIs</span><span class="tag">WebSockets</span><span class="tag">JWT Auth</span>
+          <span class="tag">RBAC</span><span class="tag">Swagger</span><span class="tag">Postman</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <p class="stack-card-label">frontend</p>
+        <div class="tag-row">
+          <span class="tag">Angular 18</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span>
+          <span class="tag">NgRx</span><span class="tag">Angular Material</span><span class="tag">TailwindCSS</span>
+          <span class="tag">Bootstrap</span><span class="tag">SCSS</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <p class="stack-card-label">database</p>
+        <div class="tag-row">
+          <span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span>
+          <span class="tag">Firebase</span>
+        </div>
+      </div>
+      <div class="stack-card">
+        <p class="stack-card-label">tools &amp; practice</p>
+        <div class="tag-row">
+          <span class="tag">Git / GitHub</span><span class="tag">Agile</span><span class="tag">MVC Architecture</span>
+          <span class="tag">Team Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <p class="section-label">/experience</p>
+    <h2 class="section-title">Where I've worked</h2>
+
+    <div class="exp-card">
+      <div class="exp-head">
+        <div>
+          <h3>Full Stack Developer</h3>
+          <p class="exp-org">Nexotips Infotech &mdash; India</p>
+        </div>
+        <span class="exp-date">Jan 2024 &mdash; Present</span>
+      </div>
+      <ul class="exp-list">
+        <li>Lead a team of 3 developers shipping Node.js + Angular products for clients across the US and Europe, cutting delivery time through workflow automation.</li>
+        <li>Architect REST APIs, JWT authentication, and role-based access control for enterprise applications.</li>
+        <li>Design database schemas and queries across MySQL, MongoDB, PostgreSQL, and Firebase.</li>
+        <li>Rebuilt Nexotips' own marketing site in Angular 14 with multi-factor authentication.</li>
+        <li>Document every API in Swagger and verify endpoints in Postman before handoff to QA.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work">
+    <p class="section-label">/work</p>
+    <h2 class="section-title">Projects shipped to production</h2>
+
+    <div class="work-grid">
+
+      <article class="work-card">
+        <div class="work-head">
+          <span class="method post">POST</span>
+          <span class="endpoint">/projects/nexdev</span>
+        </div>
+        <h3>NexDev — Developer Portal</h3>
+        <p class="work-duration">Full Stack &middot; 10 months</p>
+        <p class="work-desc">Internal platform developers use to manage workflows, roles, and project state.</p>
+        <ul class="work-list">
+          <li>JWT auth paired with RBAC to lock down access by role</li>
+          <li>Real-time sync between Angular frontend and Node backend</li>
+          <li>Modular service architecture for maintainable API growth</li>
+        </ul>
+        <div class="tag-row tag-row-tight">
+          <span class="tag tag-sm">Angular</span><span class="tag tag-sm">Node.js</span>
+          <span class="tag tag-sm">TypeScript</span><span class="tag tag-sm">MySQL</span>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-head">
+          <span class="method put">PUT</span>
+          <span class="endpoint">/projects/textile-erp</span>
+        </div>
+        <h3>Textile ERP</h3>
+        <p class="work-duration">Full Stack &middot; 10 months</p>
+        <p class="work-desc">Full-scale ERP covering inventory, POS, staff, and order workflows for a textile business.</p>
+        <ul class="work-list">
+          <li>Transaction handling and invoice generation for POS</li>
+          <li>Schemas modeled to cut redundancy; queries tuned for speed</li>
+          <li>RBAC separating admins, managers, and floor staff</li>
+        </ul>
+        <div class="tag-row tag-row-tight">
+          <span class="tag tag-sm">Angular</span><span class="tag tag-sm">Node.js</span>
+          <span class="tag tag-sm">TypeScript</span><span class="tag tag-sm">MongoDB</span>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-head">
+          <span class="method get">GET</span>
+          <span class="endpoint">/projects/findahunt</span>
+        </div>
+        <h3>FindAHunt</h3>
+        <p class="work-duration">Backend-led &middot; 1 year</p>
+        <p class="work-desc">Hotel-stay and hunt-management platform with real-time messaging and payments.</p>
+        <ul class="work-list">
+          <li>WebSocket messaging for live collaboration between users</li>
+          <li>Stripe integration for secure payment processing</li>
+          <li>Architecture built to hold up under concurrent, high-volume traffic</li>
+        </ul>
+        <div class="tag-row tag-row-tight">
+          <span class="tag tag-sm">Node.js</span><span class="tag tag-sm">WebSockets</span>
+          <span class="tag tag-sm">Stripe</span><span class="tag tag-sm">Firebase</span>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-head">
+          <span class="method patch">PATCH</span>
+          <span class="endpoint">/projects/wallzy</span>
+        </div>
+        <h3>Wallzy</h3>
+        <p class="work-duration">Full Stack &middot; 4K live wallpaper app</p>
+        <p class="work-desc">Mobile app backend handling large-scale image and video content at speed.</p>
+        <ul class="work-list">
+          <li>Media pipelines for upload, organization, and moderation</li>
+          <li>Firebase Cloud Messaging powering daily notification campaigns</li>
+          <li>Storage and retrieval optimized to cut latency on media-heavy screens</li>
+        </ul>
+        <div class="tag-row tag-row-tight">
+          <span class="tag tag-sm">Node.js</span><span class="tag tag-sm">Angular</span>
+          <span class="tag tag-sm">Firebase</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-tight" id="education">
+    <p class="section-label">/education</p>
+    <div class="edu-row">
+      <div>
+        <h3 class="edu-degree">Bachelor of Information Technology</h3>
+        <p class="edu-org">Gujarat Technological University</p>
+      </div>
+      <div class="edu-meta">
+        <span class="tag">Distinction</span>
+        <span class="edu-year">2024</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <p class="section-label">/contact</p>
+    <h2 class="section-title">Let's build something</h2>
+    <p class="contact-lede">Open to full-time and contract backend / full-stack roles.</p>
+
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:desaidency8@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">desaidency8@gmail.com</span>
+      </a>
+      <a class="contact-card" href="tel:+919510155609">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">+91 95101 55609</span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/dency-desai/" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">/in/dency-desai</span>
+      </a>
+      <a class="contact-card" href="https://github.com/dency-nexotips" target="_blank" rel="noopener">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">@dency-nexotips</span>
+      </a>
+    </div>
+
+    <div class="resume-row">
+      <a href="resume-backend.pdf" class="btn btn-primary" download>Backend résumé ↓</a>
+      <a href="resume-frontend.pdf" class="btn btn-ghost" download>Frontend résumé ↓</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Dency Desai &middot; Surat, Gujarat, India</p>
+  <p class="footer-dim">Built with HTML, CSS &amp; JS &mdash; no framework needed for this one.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
