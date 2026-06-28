@@ -21,11 +21,15 @@ The hero section renders the profile as a mock `GET /dency-desai` API response, 
 - Pulsing "pin" markers next to every section label, echoing the hero's status dot
 - Scroll-reveal animations on every section
 - Animated count-up numbers in Stats & Achievements
+- Abstract browser-chrome mockups for each project (no real screenshots needed)
+- Icon-led contact cards
 - 3D tilt + light-sweep effect on project cards
 - Scroll-progress bar
 - All motion respects `prefers-reduced-motion` and disables on touch devices
 
 **Adding your photo:** drop an image named exactly `profile.jpg` into this same folder, next to `index.html`. The About section looks for it automatically — no code changes needed. Until it's there, it shows a placeholder pattern instead of a broken image.
+
+**Résumé:** one unified résumé (`resume.pdf`) tuned for freelance/Upwork-style outreach, replacing the old separate backend/frontend versions.
 
 ## Tech
 
@@ -38,12 +42,11 @@ The hero section renders the profile as a mock `GET /dency-desai` API response, 
 
 ```
 portfolio/
-├── index.html          # all page content
-├── style.css           # design tokens + layout
-├── script.js           # preloader, cursor, tilt, reveals, count-up
-├── profile.jpg          # your photo — add this yourself (see below)
-├── resume-backend.pdf   # backend-focused résumé
-└── resume-frontend.pdf  # frontend-focused résumé
+├── index.html       # all page content
+├── style.css        # design tokens + layout
+├── script.js        # preloader, cursor, tilt, reveals, count-up
+├── profile.jpg       # your photo — add this yourself (see below)
+└── resume.pdf        # unified résumé, tuned for freelance outreach
 ```
 
 ## Running locally
@@ -83,7 +86,7 @@ All copy lives in `index.html`. Skills, experience, and project cards are plain 
 
 - Email: desaidency8@gmail.com
 - LinkedIn: [linkedin.com/in/dency-desai](https://www.linkedin.com/in/dency-desai/)
-- GitHub: [@dency-nexotips](https://github.com/dency-nexotips)
+- GitHub: [@Dency25](https://github.com/Dency25)
 
 ## License
 
